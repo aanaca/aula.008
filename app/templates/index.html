@@ -15,3 +15,22 @@
 </div>
 {{ wtf.quick_form(form) }}
 {% endblock %}
+
+<h2>Relação de usuários cadastrados</h2>
+<h4>Quantidade: {{user_all|length}}</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome do usuário</th>
+            <th>Função</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for key in user_all %}
+        <tr>
+            <td>{{ key.username }}</td>
+            <td>{{ key.role.name }}</td>            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
