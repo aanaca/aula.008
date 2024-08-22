@@ -14,7 +14,7 @@
     {% endif %}
 </div>
 {{ wtf.quick_form(form) }}
-{% endblock %}
+
 
 <h2>Relação de usuários cadastrados</h2>
 <h4>Quantidade: {{user_all|length}}</h4>
@@ -34,3 +34,5 @@
         {% endfor %}
     </tbody>
 </table>
+
+{% endblock %}
