@@ -25,10 +25,10 @@
         </tr>
     </thead>
     <tbody>
-        {% for key in user_all %}
+        {% for user in users %}
         <tr>
-            <td>{{ key.username }}</td>
-            <td>{{ key.role.name }}</td>            
+            <td>{{ user.username }}</td>
+            <td>{{ user.role.name if user.role else 'No role assigned' }}</td>
         </tr>
         {% endfor %}
     </tbody>
